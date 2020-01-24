@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Header from "./Header"
+import Card from "./Card"
 
 import axios from "axios";
+import styled from "styled-components";
 
 function CharacterList(){
     const [characters, setCharacters] = useState([]);
@@ -18,7 +19,15 @@ function CharacterList(){
     return (
         <div>
             {characters.map(character => {
-                return console.log(character);
+                return (
+                    <Card
+                    key={character.url}
+                    Name={character.name}
+                    Height={character.height}
+                    BirthYear={character.birth_year}
+                    EyeColor={character.eye_color}
+                    />
+                );
                     
             })}
         </div>
