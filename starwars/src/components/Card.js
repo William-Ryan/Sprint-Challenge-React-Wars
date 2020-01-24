@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
+
 const CardWrap = styled.div `
 color: black;
 background-color: cornflowerblue;
@@ -19,4 +20,5 @@ const Card = props => {
     </CardWrap>
     )
 }
+
 export default Card;
