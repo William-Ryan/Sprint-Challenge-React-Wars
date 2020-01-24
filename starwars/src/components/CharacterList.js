@@ -4,6 +4,13 @@ import Card from "./Card"
 import axios from "axios";
 import styled from "styled-components";
 
+const BodyWrapper = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0% 10% 0% 0%;
+`;
+
 function CharacterList(){
     const [characters, setCharacters] = useState([]);
     useState(() => {
@@ -17,7 +24,7 @@ function CharacterList(){
         })
     }, []);
     return (
-        <div>
+        <BodyWrapper>
             {characters.map(character => {
                 return (
                     <Card
@@ -30,7 +37,7 @@ function CharacterList(){
                 );
                     
             })}
-        </div>
+        </BodyWrapper>
     )
 }
 
